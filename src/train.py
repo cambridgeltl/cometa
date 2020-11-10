@@ -107,17 +107,17 @@ def train_joint(text_model, train_params, optimizer, criterion, \
         # val & test
         #if (e+1) % 5 == 0:
         
-        #accs = val_or_test(text_model, val_loader, testset.search_space_embeddings, \
-        #                      epoch=e, typ="dev ", bsz=500, GPU_INDEX=GPU_INDEX, ensemble=True)
-        accs = val_or_test(text_model, test_loader, testset.search_space_embeddings, \
-            epoch=e, typ="test", bsz=500, GPU_INDEX=GPU_INDEX, ensemble=True)
+        accs = val_or_test(text_model, val_loader, testset.search_space_embeddings, \
+                              epoch=e, typ="dev ", bsz=500, GPU_INDEX=GPU_INDEX, ensemble=True)
+        #accs = val_or_test(text_model, test_loader, testset.search_space_embeddings, \
+        #    epoch=e, typ="test", bsz=500, GPU_INDEX=GPU_INDEX, ensemble=True)
 
         #if sum(accs) > val_max: 
         if accs[0] > val_max: 
             #val_max = sum(accs)
             val_max = accs[0]
             best_sd = copy.deepcopy(text_model.state_dict())
-            #val_or_test(text_model, test_loader, testset.search_space_embeddings,\
-            #     epoch=e, typ="test", GPU_INDEX=GPU_INDEX, ensemble=True)
+            val_or_test(text_model, test_loader, testset.search_space_embeddings,\
+                 epoch=e, typ="test", GPU_INDEX=GPU_INDEX, ensemble=True)
             print ("[best epoch: %d]" % (e+1))
     return best_sd

@@ -448,11 +448,11 @@ def compute_metrics_backoff(data_loader, dataset, model, sf2id=None, train_dict=
         if ed_dict is not None:
             #if len(term) > 4 and ed_dict[i][0][1] < 0.07:
             #if i not in ed_dict.keys(): continue
-            #if (len(term)-term.count(" ")) > 5  and ed_dict[i][0][1][0] < 0.07:
             #print (ed_dict[i][0][1])
             #ed_dict[i]
-            if ed_dict[i][0][1][1] < .16:
+            #if (len(term)-term.count(" ")) > 5  and ed_dict[i][0][1][0] < 0.07:
             #if True:
+            if ed_dict[i][0][1][1] < .16:
                 pred = sf2id[ed_dict[i][0][0]]
                 prediction_dict[sample_id] = pred
                 if gt_id == pred:
