@@ -6,7 +6,18 @@ COMETA is an entity linking dataset of layman medical terminology. It has been c
 
 For a copy of the corpus, please follow instructions on our [website](https://siphs.org/corpus).
 
-### citation
+## Pretrained vectors
+
+| Model      | Download Link                                                                                                                                                                                 |
+|-----------|----------------|
+| Bioreddit-FastText  | [bin](https://drive.google.com/file/d/14xWIMx90VAxpjhPtCF_ECQemAMuSmvfU/view?usp=sharing), [vec](https://drive.google.com/file/d/1CTZEO9pvR3C8DbxJ7bt-y4t3TWGirQ_0/view?usp=sharing)                                                                                                                                                                                               |
+| Bioreddit-BERT      | [huggingface](https://huggingface.co/cambridgeltl/BioRedditBERT-uncased)                                                                                                                                                                                                |
+
+You can find vectors trained on the same Bioreddit corpus for ELMo, Flair and GloVE in [this repository](https://github.com/basaldella/bioreddit).
+
+### Citation
+
+If you use our corpus or our embeddings, please cite:
 
 ```bibtex
 @inproceedings{basaldella-etal-2020-cometa,
