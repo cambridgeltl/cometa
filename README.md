@@ -4,7 +4,7 @@ This repo holds code for running baseline models presented in our [paper](https:
 
 COMETA is an entity linking dataset of layman medical terminology. It has been collected by analysing four years of content in 68 health-themed subreddits and annotating the most frequent with their corresponding SNOMED-CT entities. Each term is assigned two annotations: a General SNOMED-CT identifier and a Specific one, denoting respectively the literal and contextual meaning of the term. 
 
-For a copy of the corpus, please download [here](https://www.dropbox.com/s/e8mdpberw959xhj/cometa.zip?dl=0).
+For a copy of the corpus, please download here: [google drive](https://drive.google.com/file/d/19xMeEdiBPUlGkblsRYXh9RIEZ5TUML3w/view?usp=sharing), [dropbox](https://www.dropbox.com/s/e8mdpberw959xhj/cometa.zip?dl=0).
 
 ## Pretrained vectors
 
